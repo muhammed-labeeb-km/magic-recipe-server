@@ -15,7 +15,7 @@ mrServer.use(router)
 
 mrServer.use('/upload',express.static('./upload'))
 
-const PORT = 3010 
+const PORT = 3010 || process.env.PORT
 
 mrServer.listen(PORT,()=>{
     console.log(`Magic Recipe Server running on ${PORT} `);
